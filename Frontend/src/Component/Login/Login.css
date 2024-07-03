@@ -1,0 +1,19 @@
+.box {
+  width: 100px;
+  height: 100px;
+  animation: grow 2s forwards;
+  animation-delay: 1s;
+}
+
+.box input,
+.box button {
+  width: 75%;
+}
+
+@keyframes grow {
+  to {
+    width: 300px;
+    height: 350px;
+    transform: rotate(360deg);
+  }
+}
