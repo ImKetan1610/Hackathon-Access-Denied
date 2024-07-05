@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
+import Nav from "../Nav/Nav";
 
 const Login = () => {
   const [displayForm, setDisplayForm] = useState(false);
@@ -61,18 +62,19 @@ const Login = () => {
 
       // Redirect after animation
       setTimeout(() => {
-        navigate("/practice");
+        navigate("/home");
       }, 500); // 500ms matches the CSS transition duration
     }
   };
 
   return (
     <>
+      <Nav browse />
       <div className={`leftBox ${submitted ? "moveLeft" : ""}`}></div>
       <div className={`rightBox ${submitted ? "moveRight" : ""}`}></div>
       {!submitted && (
         // <div className="box absolute bg-[#00FFFF] pt-10 w-1/12 my-32 mx-auto right-0 left-0 top-36 bg-opacity-40 rounded">
-        <div className="box absolute bg-[black] pt-10 w-1/12 my-32 mx-auto right-0 left-0 top-36 bg-opacity-40 rounded">
+        <div className="box absolute bg-[black] pt-10 w-1/12 my-32 mx-auto right-0 left-0 top-[5rem] bg-opacity-40 rounded">
           {displayForm && (
             <>
               <img
