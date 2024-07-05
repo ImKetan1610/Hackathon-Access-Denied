@@ -15,6 +15,10 @@ const Login = () => {
     setDisplayForm(true);
   }, 3000);
 
+  const validateUsername = (username) => {
+    return username.length >= 5 && username.length <= 8;
+  };
+
   const validateEmail = (email) => {
     const emailRegex =
       /^[a-zA-Z0-9._%+-]+@criodo\.com$|^[a-zA-Z0-9._%+-]+@criodo\.co\.in$/;
@@ -29,18 +33,23 @@ const Login = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    const user = username.current.value;
     const emailValue = email.current.value;
     const passwordValue = password.current.value;
 
     let formErrors = {};
 
+    if (!validateUsername(user)) {
+      formErrors.username = "* NAME MUST BE 5-8 CHAR LONG";
+    }
+
     if (!validateEmail(emailValue)) {
-      formErrors.email = "Email must be @criodo.com or @criodo.co.in";
+      formErrors.email = "* PLEASE ADD CRIO'S ID";
     }
 
     if (!validatePassword(passwordValue)) {
       formErrors.password =
-        "Password must contain at least one capital letter, one small letter, one special character, and one number";
+        "* PASSWORD CONTAINS: 1 CAPITAL, 1 SMALL, 1 SPECIAL, 1 NUMBER";
     }
 
     setErrors(formErrors);
@@ -62,13 +71,14 @@ const Login = () => {
       <div className={`leftBox ${submitted ? "moveLeft" : ""}`}></div>
       <div className={`rightBox ${submitted ? "moveRight" : ""}`}></div>
       {!submitted && (
-        <div className="box absolute bg-black pt-10 w-1/12 my-32 mx-auto right-0 left-0 top-36 text-white bg-opacity-35 rounded">
+        // <div className="box absolute bg-[#00FFFF] pt-10 w-1/12 my-32 mx-auto right-0 left-0 top-36 bg-opacity-40 rounded">
+        <div className="box absolute bg-[black] pt-10 w-1/12 my-32 mx-auto right-0 left-0 top-36 bg-opacity-40 rounded">
           {displayForm && (
             <>
               <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPJLxhgeByiMgFkOUYRQGUtA9LO2dB_x3Hwg&s"
                 alt="logo.jpg"
-                className="rounded-full m-auto w-10 pb-3"
+                className="rounded-full m-auto w-10 pb-3 shadow-white"
               />
               <form className="w-full" onSubmit={handleSubmit}>
                 <div className="w-full">
@@ -79,6 +89,11 @@ const Login = () => {
                     ref={username}
                     className="px-4 py-2 m-2 w-full bg-slate-700 rounded-md"
                   />
+                  {errors.username && (
+                    <p className="text-[#ff0000] text-[12px] font-bold text-left px-5">
+                      {errors.username}
+                    </p>
+                  )}
                 </div>
                 <div className="w-full">
                   <input
@@ -89,7 +104,7 @@ const Login = () => {
                     className="px-4 py-2 m-2 w-full bg-slate-700 rounded-md"
                   />
                   {errors.email && (
-                    <p className="text-red-500 text-[10px] font-bold">
+                    <p className="text-[#ff0000] text-[12px] font-bold text-left px-5">
                       {errors.email}
                     </p>
                   )}
@@ -103,13 +118,13 @@ const Login = () => {
                     className="px-4 py-2 m-2 w-full bg-slate-700 rounded-md"
                   />
                   {errors.password && (
-                    <p className="text-red-500  text-[10px] font-bold">
+                    <p className="text-[red] text-[12px] font-bold">
                       {errors.password}
                     </p>
                   )}
                 </div>
                 <div className="w-full">
-                  <button className="p-2 m-2 bg-red-700 w-full rounded-md">
+                  <button className="p-2 m-2 bg-[#00008B] w-full rounded-md">
                     Submit
                   </button>
                 </div>
