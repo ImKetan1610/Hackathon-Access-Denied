@@ -1,0 +1,45 @@
+.box {
+  width: 100px;
+  height: 100px;
+  animation: grow 2s forwards;
+  animation-delay: 1s;
+}
+
+.box input,
+.box button {
+  width: 75%;
+}
+
+@keyframes grow {
+  to {
+    width: 300px;
+    height: 375px;
+    transform: rotate(360deg);
+  }
+}
+
+.leftBox,
+.rightBox {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  transition: transform 0.5s ease-in-out;
+}
+
+.leftBox {
+  background-color: #2c3e50;
+  left: 0;
+}
+
+.rightBox {
+  background-color: #34495e;
+  right: 0;
+}
+
+.moveLeft {
+  transform: translateX(-100%);
+}
+
+.moveRight {
+  transform: translateX(100%);
+}
