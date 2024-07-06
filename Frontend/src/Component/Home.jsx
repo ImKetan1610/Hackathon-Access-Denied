@@ -2,7 +2,7 @@ import React from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Login from "./Login/Login";
 import About from "./About/About";
-import Practice from "./Practice";
+import Practice from "./Practice/Practice";
 import Chat from "./Chat/Chat";
 import Contact from "./Contact/Contact";
 

@@ -6,7 +6,9 @@ const Chat = () => {
   return (
     <>
       <Nav />
-      <div>Chat</div>
+      <div className="min-h-screen w-6/12 m-auto bg-blue-50 flex flex-col p-16 border-2 border-black">
+        hey
+      </div>
       <Footer />
     </>
   );
