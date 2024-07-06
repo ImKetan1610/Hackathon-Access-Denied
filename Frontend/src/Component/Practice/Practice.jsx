@@ -56,7 +56,7 @@ const Practice = () => {
               <Link to="/onboarding">Learn More</Link>
             </button>
           </div>
-          <div className="right-content">
+          <div className="right-content"> 
             <img
               src="https://attensi.com/wp-content/uploads/employee-onboarding-scaled.jpg"
               alt="Onboarding and Training"
