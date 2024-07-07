@@ -35,8 +35,6 @@ const Practice = () => {
     };
   }, []);
 
-  const goToPage = () => {};
-
   return (
     <>
       <Nav />
