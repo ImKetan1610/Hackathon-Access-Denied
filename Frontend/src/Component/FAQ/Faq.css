@@ -1,0 +1,27 @@
+.accordion {
+    max-width: 800px;
+    margin: 20px auto;
+  }
+  
+  .accordion-item {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .accordion-title {
+    padding: 15px;
+    cursor: pointer;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .accordion-title:hover {
+    background-color: #e7e7e7;
+  }
+  
+  .accordion-content {
+    padding: 15px;
+    background-color: #fff;
+  }
+  

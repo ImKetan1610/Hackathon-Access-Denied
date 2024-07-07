@@ -9,6 +9,7 @@ import Onboarding from "./Onboarding/Onboarding";
 import ChatTicket from "./Onboarding/ChatTicket"
 import Mock from "./Onboarding/Mock"
 import QnA from "./Onboarding/QnA";
+import Faq from "./Onboarding/Faq";
 
 const Home = () => {
   const appRouter = createBrowserRouter([
@@ -47,6 +48,10 @@ const Home = () => {
     {
       path:"/qna",
       element: <QnA />
+    },
+    {
+      path:"/faq",
+      element: <Faq />
     }
   ]);
   return (

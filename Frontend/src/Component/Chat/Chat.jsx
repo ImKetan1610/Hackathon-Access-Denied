@@ -1,14 +1,18 @@
-import React from "react";
 import Nav from "../Nav/Nav";
 import Footer from "../Footer/Footer";
-import Chatbot from "./Chatbot";
 
 const Chat = () => {
   return (
     <>
       <Nav />
-      <div id="chat" className="min-h-screen w-6/12  mx-auto flex flex-col p-1">
-        <Chatbot />
+      <div id="chat" className="mx-auto">
+        <iframe
+          className="border-2"
+          width="1520px"
+          height="800px"
+          src=" https://chatbot-gem.onrender.com/"
+          title="Chat Bot"
+        ></iframe>
       </div>
       <Footer />
     </>
