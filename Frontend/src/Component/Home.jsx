@@ -6,10 +6,10 @@ import Practice from "./Practice/Practice";
 import Chat from "./Chat/Chat";
 import Contact from "./Contact/Contact";
 import Onboarding from "./Onboarding/Onboarding";
-import ChatTicket from "./Onboarding/ChatTicket"
-import Mock from "./Onboarding/Mock"
+import ChatTicket from "./Onboarding/ChatTicket";
+import Mock from "./Onboarding/Mock";
 import QnA from "./Onboarding/QnA";
-import Faq from "./Onboarding/Faq";
+import Faq from "./FAQ/Faq";
 
 const Home = () => {
   const appRouter = createBrowserRouter([
@@ -38,21 +38,21 @@ const Home = () => {
       element: <Onboarding />,
     },
     {
-      path:"/chatTicket",
-      element: <ChatTicket />
+      path: "/chatTicket",
+      element: <ChatTicket />,
     },
     {
-      path:"/mock",
-      element: <Mock />
+      path: "/mock",
+      element: <Mock />,
     },
     {
-      path:"/qna",
-      element: <QnA />
+      path: "/qna",
+      element: <QnA />,
     },
     {
-      path:"/faq",
-      element: <Faq />
-    }
+      path: "/faqs",
+      element: <Faq />,
+    },
   ]);
   return (
     <div>
