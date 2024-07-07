@@ -126,7 +126,7 @@ const Nav = ({ browse }) => {
 
   return (
     <nav
-      className={`absolute flex justify-between w-full m-0 px-2 pt-2 m-0 bg-gradient-to-b ${
+      className={`fixed top-0 justify-between w-full m-0 px-2 pt-2 m-0 bg-gradient-to-b ${
         browse ? "" : "from-blue-900"
       } to-blue-500 z-10`}
     >

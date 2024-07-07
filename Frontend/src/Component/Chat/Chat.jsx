@@ -1,14 +1,20 @@
 import React from "react";
 import Nav from "../Nav/Nav";
 import Footer from "../Footer/Footer";
+import Chatbot from "./Chatbot";
+// import "bootstrap/dist/css/bootstrap.min.css";
 
 const Chat = () => {
   return (
     <>
       <Nav />
-      <div className="min-h-screen w-6/12 m-auto bg-blue-50 flex flex-col p-16 border-2 border-black">
-        hey
+      <div
+        id="chat"
+        className="min-h-screen w-6/12  mx-auto flex flex-col p-1"
+      >
+        <Chatbot />
       </div>
+
       <Footer />
     </>
   );
